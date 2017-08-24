@@ -29,12 +29,18 @@ public class SortMapByValue {
     //总体思想就是使用Collections.sort 然后传入comparator,实现compare方法,传入value参数
     public static Map sortMap(Map oldMap) {
         ArrayList<Map.Entry<String, Integer>> list = new ArrayList<Map.Entry<String, Integer>>(oldMap.entrySet());
-        Collections.sort(list, new Comparator<Map.Entry<String, Integer>>() {
-            @Override
-            public int compare(Map.Entry<String, Integer> arg0, Map.Entry<String, Integer> arg1) {
-                return arg0.getValue() - arg1.getValue();
-            }
-        });
+//        Collections.sort(list, new Comparator<Map.Entry<String, Integer>>() {
+//            @Override
+//            public int compare(Map.Entry<String, Integer> arg0, Map.Entry<String, Integer> arg1) {
+//                return arg0.getValue() - arg1.getValue();
+//            }
+//        });
+
+//        Collections.sort(list, (arg0, arg1) -> arg0.getValue() - arg1.getValue());
+        Collections.sort(list, Comparator.comparingInt(Map.Entry::getValue));
+
+
+
         Map newMap = new LinkedHashMap();
         for (int i = 0; i < list.size(); i++) {
             newMap.put(list.get(i).getKey(), list.get(i).getValue());
