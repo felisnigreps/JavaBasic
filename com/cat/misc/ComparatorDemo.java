@@ -60,6 +60,7 @@ public class ComparatorDemo {
         Collections.sort(list, comparator.reversed());
         System.out.println(list);
 
+        System.out.println(Integer.toString(2));
     }
 
 

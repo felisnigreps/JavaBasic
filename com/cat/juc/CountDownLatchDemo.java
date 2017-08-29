@@ -8,9 +8,9 @@ import java.util.concurrent.CountDownLatch;
 public class CountDownLatchDemo {
     public static void main(String[] args) {
         //设置一个结束信号
-        CountDownLatch end = new CountDownLatch(100);
+        CountDownLatch end = new CountDownLatch(4);
         //创建100个线程并start
-        for (int i = 0; i < 100; i++) {
+        for (int i = 0; i < 4; i++) {
             new Thread(new Player("CG" + i, end)).start();
         }
         try {
