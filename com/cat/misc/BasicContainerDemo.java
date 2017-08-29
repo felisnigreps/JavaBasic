@@ -50,6 +50,6 @@ public class BasicContainerDemo {
         linkedMap.put("bc","1");
         linkedMap.put("dcs","1");
         System.out.println(linkedMap);
-       
+
     }
 }
