@@ -1,6 +1,6 @@
 package com.cat.thread;
 
-public class VolatileDemo {
+public class VolatileNotAtomicDemo {
     private static volatile int _longVal = 0;
 
     public static void main(String[] args) {
