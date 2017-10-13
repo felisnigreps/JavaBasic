@@ -1,6 +1,6 @@
 package com.cat.misc.annotation;
 
-public enum Gender {
+public enum Gender  {
     MAN {
         public String getName() {
             return "male";
